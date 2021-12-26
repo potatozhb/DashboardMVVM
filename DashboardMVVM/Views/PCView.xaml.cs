@@ -13,19 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DashboardMVVM
+namespace DashboardMVVM.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for PCView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PCView : UserControl
     {
-        public MainWindow()
+        public PCView()
         {
             InitializeComponent();
         }
-
-       
     }
-
 }

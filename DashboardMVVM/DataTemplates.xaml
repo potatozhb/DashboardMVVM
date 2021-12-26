@@ -1,0 +1,39 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vm ="clr-namespace:DashboardMVVM.ViewModels"
+                    xmlns:view="clr-namespace:DashboardMVVM.Views">
+
+    <!--Data Templates apply views to viewModel objects displayed in the UI-->
+
+    <DataTemplate DataType="{x:Type vm:DesktopViewModel}">
+        <view:DesktopView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:StartupViewModel}">
+        <view:StartupView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:PCViewModel}">
+        <view:PCView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:HomeViewModel}">
+        <view:HomeView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:DocumentViewModel}">
+        <view:DocumentView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:DownloadViewModel}">
+        <view:DownloadView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MovieViewModel}">
+        <view:MovieView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:MusicViewModel}">
+        <view:MusicView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:TrashViewModel}">
+        <view:TrashView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:PictureViewModel}">
+        <view:PictureView/>
+    </DataTemplate>
+</ResourceDictionary>

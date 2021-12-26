@@ -13,19 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DashboardMVVM
+namespace DashboardMVVM.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MovieView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MovieView : UserControl
     {
-        public MainWindow()
+        public MovieView()
         {
             InitializeComponent();
         }
-
-       
     }
-
 }

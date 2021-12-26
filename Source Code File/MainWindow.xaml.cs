@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DashboardMVVM
+namespace ModernDashboard
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -24,8 +24,5 @@ namespace DashboardMVVM
         {
             InitializeComponent();
         }
-
-       
     }
-
 }

@@ -13,19 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DashboardMVVM
+namespace ModernDashboard.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for DesktopView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class DesktopView : UserControl
     {
-        public MainWindow()
+        public DesktopView()
         {
             InitializeComponent();
         }
-
-       
     }
-
 }
