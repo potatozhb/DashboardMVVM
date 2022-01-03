@@ -1,0 +1,240 @@
+﻿<UserControl x:Class="UIDesign.Views.CurrencyView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UIDesign.Views"
+             xmlns:vm ="clr-namespace:UIDesign.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="600"
+             Background="LightGreen" BorderBrush="Red" BorderThickness="2">
+
+    <Control.DataContext>
+        <vm:CurrencyViewModel/>
+    </Control.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <TextBlock Text="Currency Converter"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Foreground="#FFED3051"
+                   FontSize="20"
+                   FontWeight="Black"/>
+            <TextBlock Text="Convertered Currency"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Foreground="Black"
+                   Margin="0,5,0,0"
+                   FontSize="12"/>
+            <TextBlock Text="{Binding ChangedCurrency}"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Foreground="Black"
+                   Margin="0,5,0,0"
+                   FontSize="12"/>
+        </StackPanel>
+
+        <!--Main content-->
+        
+        <Grid Grid.Row="2" Grid.RowSpan="2" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Border CornerRadius="12" Grid.Row="0" Grid.RowSpan="3"
+                    Grid.Column="0" Grid.ColumnSpan ="6">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0,1">
+                        <GradientStop Color="#FFFD3875"/>
+                        <GradientStop Color="#FFFF4C41" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Border Margin="5,5,5,5"
+                        CornerRadius="12"
+                        BorderThickness="0.5"
+                        BorderBrush="White"
+                        Opacity="0.5"/>
+            </Border>
+
+            <TextBlock Text="Enter Amount:" Grid.Column="1"
+                       Foreground="White"
+                       FontSize="16"
+                       VerticalAlignment="Bottom"/>
+            <TextBox Grid.Row="1" Grid.Column="1"
+                     Margin="0,5,0,0"
+                     Width="100" Height="25"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Top"
+                     Text="{Binding InputMoney}"/>
+
+           
+            <TextBlock Text="From:" Grid.Column="2"
+                       Foreground="White"
+                       FontSize="16"
+                       VerticalAlignment="Bottom"/>
+            <Grid Grid.Row="1" Grid.Column="2">
+            
+            <ComboBox x:Name="SelectCombo"
+                     Margin="0,5,0,0"
+                     Width="100" Height="25"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Top"
+                    ItemsSource="{Binding CurrenciesFrom}"
+                DisplayMemberPath="CurrencyName"
+                SelectedValue="{Binding SelectFrom}">                
+            </ComboBox>
+               
+            <TextBlock Text="--SELECT--"
+                    Style="{StaticResource SelectStyle1}"/>
+
+
+            </Grid>
+            
+            <TextBlock Text="To:" Grid.Column="4"
+                       Foreground="White"
+                       FontSize="16"
+                       VerticalAlignment="Bottom"/>
+
+            <Grid Grid.Row="1" Grid.Column="4">
+
+            <ComboBox x:Name="SelectCombo2"
+                     Margin="0,5,0,0"
+                     Width="100" Height="25"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Top"
+                      ItemsSource="{Binding CurrenciesTo}"
+                      DisplayMemberPath="CurrencyName"
+                    SelectedValue="{Binding SelectTo}"/>
+            <TextBlock Text="--SELECT--"
+                Style="{StaticResource SelectStyle2}"/>
+            </Grid>
+            
+            <Rectangle Width="28" Height="2" 
+                       Grid.Column="3"
+                       Grid.Row="1"
+                       Fill="White"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left"
+                       Margin="0,12,0,0"/>
+            <Rectangle Width="28" Height="2" 
+                       Grid.Column="3"
+                       Grid.Row="1"
+                       Fill="White"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left"
+                       Margin="2,17,0,0"/>
+            <Polygon Points="28,15,28,11,30,13"
+                     Grid.Column="3"
+                     Grid.Row="1"
+                     Stroke="White"
+                     Fill="White"/>
+            <Polygon Points="2,16,2,20,0,18"
+                     Grid.Column="3"
+                     Grid.Row="1"
+                     Stroke="White"
+                     Fill="White"/>
+        </Grid>
+        
+        <!--buttons-->
+
+        <Grid Grid.Column="1" Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="120"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"></RowDefinition>
+                <RowDefinition Height="28"></RowDefinition>
+                <RowDefinition ></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <Button Content="Convert"
+                    Grid.Column="1" Grid.Row="1"
+                    Margin="0,0,10,0"
+                    Style="{StaticResource ButtonStyle1}"
+                    Command="{Binding Convert}">
+                
+            </Button>
+
+            <Button Content="Clear"
+                    Grid.Column="2" Grid.Row="1"
+                    Margin="10,0,0,0"
+                    Command="{Binding ClearData}">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="Background">
+                            <Setter.Value>
+                                <LinearGradientBrush EndPoint="1,1" StartPoint="0,1">
+                                    <GradientStop Color="#FFFD3875"/>
+                                    <GradientStop Color="#FFFF4C41" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Property="Cursor" Value="Hand"/>
+
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="1,1" StartPoint="0,1">
+                                            <GradientStop Color="Red"/>
+                                            <GradientStop Color="Blue" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"/>
+                        </Border>
+
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </Grid>
+       
+        
+        <!--Logo-->
+
+        <StackPanel Grid.Row="6" Grid.Column="1">
+            <Image Width="40" Height="40" Source="/assets/calendar_icon.png" Stretch="Fill"/>
+            <TextBlock Text="My Currency Converter" HorizontalAlignment="Center" Foreground="White"/>
+        </StackPanel>
+        
+        
+    </Grid>
+</UserControl>

@@ -25,7 +25,7 @@
     <Grid Background="#303030">
         <TextBlock Text="Documents"
                    FontSize="24"
-                   FontFamily="/fonts/OpenSans-Regular.ttf"
+                   FontFamily="/fonts/#OpenSans-Regular"
                    Foreground="#DDDDDD"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top"

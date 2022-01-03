@@ -31,7 +31,7 @@
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top"
                    Margin="5,12,0,0"
-                   FontFamily="/fonts/OpenSans-Regular.ttf"/>
+                   FontFamily="/fonts/#OpenSans-Regular"/>
         <ItemsControl ItemsSource="{Binding HomeSourceCollection}"
                       Height="350" Width="650"
                       Margin="0,40,0,0">
