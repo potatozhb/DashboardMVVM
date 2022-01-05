@@ -10,7 +10,7 @@
                     <Border x:Name="border" CornerRadius="5">
                         <Border.Background>
                             <LinearGradientBrush EndPoint="1,1" StartPoint="0,1">
-                                <GradientStop Color="#FFFD3875"/>
+                                <GradientStop Color="Blue"/>
                                 <GradientStop Color="#FFFF4C41" Offset="1"/>
                             </LinearGradientBrush>
                         </Border.Background>

@@ -15,8 +15,10 @@ namespace UIDesign.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propname));
         }
 
-
-        private object _currentview = new HomeView();
+        /// <summary>
+        /// use datatemplates to apply view on viewmodel object displayed in UI.
+        /// </summary>
+        private object _currentview = new CurrencyViewModel();
         public object MyCurrencyView
         {
             get { return _currentview; }
@@ -65,6 +67,27 @@ namespace UIDesign.ViewModels
         {
             
             MyCurrencyView = new CurrencyView();
+        }
+
+
+        private ICommand _gohome;
+        public ICommand GoHome
+        {
+            get
+            {
+                if (_gohome == null)
+                {
+                    _gohome= new RelayCommands(para => GoHomePage());
+                }
+
+                return _gohome;
+            }
+        }
+
+        private void GoHomePage()
+        {
+
+            MyCurrencyView = new HomeView();
         }
     }
 }

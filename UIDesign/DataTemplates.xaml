@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vm ="clr-namespace:UIDesign.ViewModels"
+                    xmlns:view ="clr-namespace:UIDesign.Views">
+
+    <!--Binding from viewmodel to view-->
+    <DataTemplate DataType="{x:Type vm:CurrencyViewModel}">
+        <view:CurrencyView/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:HomeViewModel}">
+        <view:HomeView/>
+    </DataTemplate>
+</ResourceDictionary>

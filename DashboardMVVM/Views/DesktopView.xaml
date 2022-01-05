@@ -4,11 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DashboardMVVM.Views"
+             xmlns:vm ="clr-namespace:DashboardMVVM.ViewModels"
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="650">
 
     <!--Fade In Animation-->
-
+    <UserControl.DataContext>
+        <vm:DesktopViewModel/>
+    </UserControl.DataContext>
+    
     <UserControl.Style>
         <Style>
             <Style.Triggers>
@@ -57,6 +61,10 @@
                                  Tag="{Binding DesktopImage}"
                                  Style="{StaticResource GridButtonStyle}"
                                  GroupName="DesktopGroup"/>
+                    <!--<StackPanel>
+                        <Image Width="50" Height="50" Source="{Binding DesktopImage}"/>
+                        <TextBlock Text="{Binding DesktopName}"/>
+                    </StackPanel>-->
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
 

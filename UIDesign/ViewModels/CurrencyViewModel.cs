@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Input;
+using System.Windows;
 
 namespace UIDesign.ViewModels
 {
-    public class CurrencyViewModel: INotifyPropertyChanged
+    public class CurrencyViewModel: DependencyObject,INotifyPropertyChanged
     {
+
+
         private string _changedcurrency;
 
         public string ChangedCurrency
@@ -71,12 +74,13 @@ namespace UIDesign.ViewModels
 
         public CurrencyViewModel()
         {
+
             _currenciesfrom.Add(new CurrencyModel { CurrencyName="USD", ConvertRatio =1 });
             _currenciesfrom.Add(new CurrencyModel { CurrencyName="CAD", ConvertRatio =0.71 });
             _currenciesfrom.Add(new CurrencyModel { CurrencyName="RMB", ConvertRatio =0.18 });
             _currenciesfrom.Add(new CurrencyModel { CurrencyName="JPY", ConvertRatio =0.081 });
             _currenciesfrom.Add(new CurrencyModel { CurrencyName="ERD", ConvertRatio =1.5 });
-            _currenciesfrom.Add(new CurrencyModel { CurrencyName="RSD", ConvertRatio =1 });
+            _currenciesfrom.Add(new CurrencyModel { CurrencyName="RSD", ConvertRatio =0.01 });
 
 
             _currenciesto.Add(new CurrencyModel { CurrencyName="USD", ConvertRatio =1 });
@@ -84,7 +88,7 @@ namespace UIDesign.ViewModels
             _currenciesto.Add(new CurrencyModel { CurrencyName="RMB", ConvertRatio =0.18 });
             _currenciesto.Add(new CurrencyModel { CurrencyName="JPY", ConvertRatio =0.081 });
             _currenciesto.Add(new CurrencyModel { CurrencyName="ERD", ConvertRatio =1.5 });
-            _currenciesto.Add(new CurrencyModel { CurrencyName="RSD", ConvertRatio =1 });
+            _currenciesto.Add(new CurrencyModel { CurrencyName="RSD", ConvertRatio =0.01 });
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

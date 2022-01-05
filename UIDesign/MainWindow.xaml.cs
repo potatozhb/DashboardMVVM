@@ -20,6 +20,7 @@ namespace UIDesign
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
@@ -29,6 +30,8 @@ namespace UIDesign
         {
             if(e.LeftButton == MouseButtonState.Pressed)
                 this.DragMove();
+
+            
         }
     }
 }

@@ -23,6 +23,7 @@ namespace UIDesign.Views
         public CurrencyView()
         {
             InitializeComponent();
+            this.Resources["DynamicaResourceColor"] = new SolidColorBrush(Colors.Red);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace DashboardMVVM.ViewModels
         {            
             ObservableCollection<DesktopItems> desktopItems = new ObservableCollection<DesktopItems>
             {
-                new DesktopItems { DesktopName = "File", DesktopImage = @"Assets/file_icon.png" },
+                new DesktopItems { DesktopName = "File", DesktopImage = @"/Assets/file_icon.png" },
                 new DesktopItems { DesktopName = "Music", DesktopImage = @"Assets/musical_icon.png" },
                 new DesktopItems { DesktopName = "Pictures", DesktopImage = @"Assets/picture_icon.png" },
                 new DesktopItems { DesktopName = "Analytics", DesktopImage = @"Assets/analytics_icon.png" },
