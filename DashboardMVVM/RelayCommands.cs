@@ -12,7 +12,7 @@ namespace DashboardMVVM
     public class RelayCommands : ICommand
     {
         private Action<object> _execute;
-        private Func<object, bool> _canExecute;
+        private Func<object, bool> _canExecute;  
 
         public RelayCommands(Action<object> execute)
         {
