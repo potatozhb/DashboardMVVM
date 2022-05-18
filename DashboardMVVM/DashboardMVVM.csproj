@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Class1.cs" />
     <Compile Include="RelayCommands.cs" />
     <Compile Include="ViewModels\DesktopViewModel.cs" />
     <Compile Include="ViewModels\DocumentViewModel.cs" />
