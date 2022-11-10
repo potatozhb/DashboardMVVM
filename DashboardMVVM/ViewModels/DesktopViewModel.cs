@@ -11,7 +11,7 @@ namespace DashboardMVVM.ViewModels
         private readonly CollectionViewSource DesktopItemsCollection;
         public ICollectionView DesktopSourceCollection => DesktopItemsCollection.View;
 
-        public DesktopViewModel() 
+        public DesktopViewModel() //test tree
         {            
             ObservableCollection<DesktopItems> desktopItems = new ObservableCollection<DesktopItems>
             {
