@@ -12,6 +12,6 @@ namespace DashboardMVVM
     /// Interaction logic for App.xaml
     /// </summary>
     public partial class App : Application
-    {//1,2
+    {//1,2,3
     }
 }
